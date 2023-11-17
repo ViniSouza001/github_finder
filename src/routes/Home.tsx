@@ -6,7 +6,6 @@ import Error from "../components/Error";
 
 const Home = () => {
   const [user, setUser] = useState<UserProps | null>(null);
-  const [userName, setUserName] = useState("");
   const [error, setError] = useState(false);
   const [showProjects, setShowProjects] = useState(false);
 
@@ -33,7 +32,6 @@ const Home = () => {
       following,
     };
     setUser(userData);
-    setUserName(userData.login);
     localStorage.removeItem("user");
     localStorage.setItem("user", JSON.stringify(userName));
   };
